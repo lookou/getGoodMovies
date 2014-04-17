@@ -21,7 +21,7 @@ for key in key_words:
 	f = urllib.urlopen('https://api.douban.com/v2/movie/search?count=20&q=' + key);
 
 	obj = f.read();
-	print obj;
+	#print obj;
 	oobj = json.loads(obj);
 	result[oobj['subjects'][0]['title']] = oobj['subjects'][0]['rating']['average'];
 
